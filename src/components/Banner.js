@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; 
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/file.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
@@ -20,7 +20,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -66,9 +66,11 @@ export const Banner = () => {
                 <p>
                   Passionné de nouvelles technologies, je suis un éternel apprenant qui vois en chaque défi une opportunité d'innovation.
                 </p>
-                <button onClick={() => console.log('connect')}>
-                  Discutons de vos besoins 📧 <ArrowRightCircle size={25} />
-                </button>
+                <a href="#connect">
+                  <button>
+                    Discutons de vos besoins 📧 <ArrowRightCircle size={25} />
+                  </button>
+                </a>
               </div>}
             </TrackVisibility>
           </Col>
